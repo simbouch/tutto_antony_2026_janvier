@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌐 Déploiement Automatique &mdash; Documentation Tutto Antony 2026 0.1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=897fae25"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=e6b791cb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="prev" title="💻 Référence des Commandes" href="commands.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #2980B9" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tutto Antony 2026
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">📚 Sommaire</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">🚀 Quickstart - Démarrage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#prerequis">1. Prérequis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#cloner-le-projet">2. Cloner le projet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#installer-les-dependances">3. Installer les dépendances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#activer-l-environnement-optionnel">4. Activer l’environnement (optionnel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#lancer-les-tests">5. Lancer les tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#construire-la-documentation">6. Construire la documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#workflow-quotidien">7. Workflow quotidien</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="commands.html">💻 Référence des Commandes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#commandes-uv">🔧 Commandes uv</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#installation-et-environnement">Installation et environnement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#ajouter-supprimer-des-dependances">Ajouter/Supprimer des dépendances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html#executer-des-commandes">Exécuter des commandes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#commandes-pytest">🧪 Commandes pytest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#commandes-sphinx">📚 Commandes Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#commandes-git">🐙 Commandes Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html#commandes-github-actions">🔄 Commandes GitHub Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">🌐 Déploiement Automatique</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#comment-ca-marche">Comment ça marche ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#le-fichier-workflow">Le fichier workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-github-pages">Configuration GitHub Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#verifier-le-deploiement">Vérifier le déploiement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#resoudre-les-problemes">Résoudre les problèmes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#erreur-pages-not-enabled">Erreur « Pages not enabled »</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#erreur-sphinx-build-failed">Erreur « Sphinx build failed »</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#erreur-permission-denied">Erreur « Permission denied »</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#url-de-ta-documentation">URL de ta documentation</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #2980B9" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tutto Antony 2026</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">🌐 Déploiement Automatique</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/deployment.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="deploiement-automatique">
+<h1>🌐 Déploiement Automatique<a class="headerlink" href="#deploiement-automatique" title="Lien vers cette rubrique"></a></h1>
+<p>Cette page explique comment les docs sont déployées automatiquement.</p>
+<section id="comment-ca-marche">
+<h2>Comment ça marche ?<a class="headerlink" href="#comment-ca-marche" title="Lien vers cette rubrique"></a></h2>
+<img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub-Actions-blue?logo=github" />
+<p>Quand tu fais <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> sur la branche <code class="docutils literal notranslate"><span class="pre">main</span></code> :</p>
+<ol class="arabic simple">
+<li><p><strong>GitHub Actions</strong> détecte le push</p></li>
+<li><p>Le workflow <code class="docutils literal notranslate"><span class="pre">.github/workflows/docs.yaml</span></code> se lance</p></li>
+<li><p><strong>uv</strong> installe les dépendances</p></li>
+<li><p><strong>Sphinx</strong> construit la documentation</p></li>
+<li><p>Les fichiers HTML sont déployés sur <strong>GitHub Pages</strong></p></li>
+<li><p>Ta doc est visible sur <a class="reference external" href="https://simbouch.github.io/tutto_antony_2026_janvier/">https://simbouch.github.io/tutto_antony_2026_janvier/</a></p></li>
+</ol>
+</section>
+<section id="le-fichier-workflow">
+<h2>Le fichier workflow<a class="headerlink" href="#le-fichier-workflow" title="Lien vers cette rubrique"></a></h2>
+<p>Voici le contenu de <code class="docutils literal notranslate"><span class="pre">.github/workflows/docs.yaml</span></code> :</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy Documentation</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">main</span><span class="p p-Indicator">]</span>
+
+<span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">  </span><span class="nt">pages</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">  </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build-docs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout code</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v4</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install uv</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">astral-sh/setup-uv@v3</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;latest&quot;</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uv sync --all-extras</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build Sphinx Documentation</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uv run sphinx-build source public</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upload artifact</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/upload-pages-artifact@v3</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;public&#39;</span>
+
+<span class="w">  </span><span class="nt">deploy-docs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build-docs</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github-pages</span>
+<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ steps.deployment.outputs.page_url }}</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy to GitHub Pages</span>
+<span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deployment</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/deploy-pages@v4</span>
+</pre></div>
+</div>
+</section>
+<section id="configuration-github-pages">
+<h2>Configuration GitHub Pages<a class="headerlink" href="#configuration-github-pages" title="Lien vers cette rubrique"></a></h2>
+<p>Pour que ça marche, il faut activer GitHub Pages :</p>
+<ol class="arabic simple">
+<li><p>Va dans <strong>Settings</strong> → <strong>Pages</strong></p></li>
+<li><p>Choisis <strong>Source</strong> : <code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Actions</span></code></p></li>
+<li><p>Sauvegarde</p></li>
+</ol>
+<p>C’est tout ! Les prochains push déploieront automatiquement.</p>
+</section>
+<section id="verifier-le-deploiement">
+<h2>Vérifier le déploiement<a class="headerlink" href="#verifier-le-deploiement" title="Lien vers cette rubrique"></a></h2>
+<ol class="arabic simple">
+<li><p>Va sur GitHub → <strong>Actions</strong></p></li>
+<li><p>Tu vois le workflow « Deploy Documentation »</p></li>
+<li><p>Clique dessus pour voir les logs</p></li>
+<li><p>Si c’est vert ✅ → va sur <a class="reference external" href="https://simbouch.github.io/tutto_antony_2026_janvier/">https://simbouch.github.io/tutto_antony_2026_janvier/</a></p></li>
+</ol>
+</section>
+<section id="resoudre-les-problemes">
+<h2>Résoudre les problèmes<a class="headerlink" href="#resoudre-les-problemes" title="Lien vers cette rubrique"></a></h2>
+<section id="erreur-pages-not-enabled">
+<h3>Erreur « Pages not enabled »<a class="headerlink" href="#erreur-pages-not-enabled" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p>Va dans Settings → Pages → Active GitHub Actions comme source</p></li>
+</ul>
+</section>
+<section id="erreur-sphinx-build-failed">
+<h3>Erreur « Sphinx build failed »<a class="headerlink" href="#erreur-sphinx-build-failed" title="Lien vers cette rubrique"></a></h3>
+<ul class="simple">
+<li><p>Vérifie que <code class="docutils literal notranslate"><span class="pre">source/index.rst</span></code> existe</p></li>
+<li><p>Vérifie <code class="docutils literal notranslate"><span class="pre">source/conf.py</span></code></p></li>
+<li><p>Teste localement avec <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">run</span> <span class="pre">sphinx-build</span> <span class="pre">source</span> <span class="pre">public</span></code></p></li>
+</ul>
+</section>
+<section id="erreur-permission-denied">
+<h3>Erreur « Permission denied »<a class="headerlink" href="#erreur-permission-denied" title="Lien vers cette rubrique"></a></h3>
+<p>Ajoute ces permissions dans le workflow :</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">permissions</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">  </span><span class="nt">pages</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<span class="w">  </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="url-de-ta-documentation">
+<h2>URL de ta documentation<a class="headerlink" href="#url-de-ta-documentation" title="Lien vers cette rubrique"></a></h2>
+<p>📖 <strong>https://simbouch.github.io/tutto_antony_2026_janvier/</strong></p>
+<p>Garde ce lien en favoris !</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="commands.html" class="btn btn-neutral float-left" title="💻 Référence des Commandes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Droits d'auteur 2026, Bouchaib.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

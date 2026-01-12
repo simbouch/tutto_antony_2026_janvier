@@ -1,28 +1,38 @@
 # Configuration file for the Sphinx documentation builder.
-#
-# For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-
-project = 'tutto_antony_2026_janvier'
-copyright = '2026, bouchaib'
-author = 'bouchaib'
+project = 'Tutto Antony 2026'
+copyright = '2026, Bouchaib'
+author = 'Bouchaib'
 release = '0.1.0'
 
 # -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-
-extensions = []
+extensions = [
+    'sphinx.ext.autodoc',      # Auto-generate docs from docstrings
+    'sphinx.ext.viewcode',     # Add links to source code
+    'sphinx.ext.napoleon',     # Support Google/NumPy docstrings
+]
 
 templates_path = ['_templates']
 exclude_patterns = []
 
-
+# Language
+language = 'fr'
 
 # -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
+# Use the Read the Docs theme (much nicer!)
+html_theme = 'sphinx_rtd_theme'
 
-html_theme = 'alabaster'
+html_theme_options = {
+    'navigation_depth': 4,
+    'collapse_navigation': False,
+    'sticky_navigation': True,
+    'style_nav_header_background': '#2980B9',
+}
+
 html_static_path = ['_static']
+
+# Logo and branding (optional - create these files if you want)
+# html_logo = '_static/logo.png'
+# html_favicon = '_static/favicon.ico'
