@@ -1,14 +1,14 @@
 ==========================
-🚀 Quickstart - Démarrage
+🚀 Quick Start Guide
 ==========================
 
-Cette page explique comment démarrer avec ce projet.
+Get up and running with this project in minutes.
 
 
-1. Prérequis
-============
+1. Prerequisites
+================
 
-Tu dois avoir **uv** installé sur ta machine.
+**uv** must be installed on your machine.
 
 .. code-block:: bash
 
@@ -19,8 +19,8 @@ Tu dois avoir **uv** installé sur ta machine.
    uv --version
 
 
-2. Cloner le projet
-===================
+2. Clone the Project
+====================
 
 .. code-block:: bash
 
@@ -28,84 +28,84 @@ Tu dois avoir **uv** installé sur ta machine.
    cd tutto_antony_2026_janvier
 
 
-3. Installer les dépendances
-============================
+3. Install Dependencies
+=======================
 
 .. code-block:: bash
 
-   # uv crée automatiquement un environnement virtuel .venv
+   # uv automatically creates a .venv virtual environment
    uv sync --all-extras
 
-Ce que fait ``uv sync`` :
+What ``uv sync`` does:
 
-- Lit ``pyproject.toml`` pour les dépendances
-- Crée un ``.venv`` si besoin
-- Installe toutes les dépendances (y compris dev/docs)
-- Utilise ``uv.lock`` pour des versions reproductibles
+- Reads ``pyproject.toml`` for dependencies
+- Creates ``.venv`` if needed
+- Installs all dependencies (including dev/docs)
+- Uses ``uv.lock`` for reproducible versions
 
 
-4. Activer l'environnement (optionnel)
-======================================
+4. Activate Environment (Optional)
+==================================
 
 .. code-block:: bash
 
    # Windows PowerShell
    .\.venv\Scripts\Activate.ps1
-   
+
    # Linux/Mac
    source .venv/bin/activate
 
 .. note::
-   Avec ``uv run``, tu n'as pas besoin d'activer manuellement !
-   ``uv run <commande>`` utilise automatiquement le bon environnement.
+   With ``uv run``, you don't need to activate manually!
+   ``uv run <command>`` automatically uses the correct environment.
 
 
-5. Lancer les tests
-===================
+5. Run Tests
+============
 
 .. code-block:: bash
 
    uv run pytest
 
-Tu devrais voir :
+Expected output:
 
 .. code-block:: text
 
    ========================= test session starts =========================
-   collected 1 item
-   
-   test/test_valid.py .                                            [100%]
-   
-   ========================== 1 passed in 0.01s ==========================
+   collected 10 items
+
+   test/test_valid.py ..........                                    [100%]
+
+   ========================== 10 passed in 0.18s =========================
 
 
-6. Construire la documentation
-==============================
+6. Build Documentation
+======================
 
 .. code-block:: bash
 
-   # Génère le HTML dans le dossier "public"
+   # Generate HTML in the "public" folder
    uv run sphinx-build source public
 
-Puis ouvre ``public/index.html`` dans ton navigateur.
+Then open ``public/index.html`` in your browser.
 
 
-7. Workflow quotidien
-=====================
+7. Daily Workflow
+=================
 
 .. code-block:: bash
 
-   # 1. Faire des modifications
-   # 2. Tester
+   # 1. Make changes
+   # 2. Run tests
    uv run pytest
-   
-   # 3. Construire les docs pour vérifier
+
+   # 3. Build docs to verify
    uv run sphinx-build source public
-   
-   # 4. Commit et push
+
+   # 4. Commit and push
    git add .
-   git commit -m "Description des changements"
+   git commit -m "Description of changes"
    git push
 
-Après le push, GitHub Actions déploie automatiquement les docs ! 🎉
+After push, GitHub Actions automatically deploys the docs! 🎉
 

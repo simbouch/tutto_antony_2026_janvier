@@ -3,8 +3,8 @@
 
 # -- Project information -----------------------------------------------------
 project = 'Tutto Antony 2026'
-copyright = '2026, Bouchaib'
-author = 'Bouchaib'
+copyright = '2026'
+author = 'Project Contributors'
 release = '0.1.0'
 
 # -- General configuration ---------------------------------------------------

@@ -1,30 +1,30 @@
 ====================================
-🌐 Déploiement Automatique
+🌐 Automatic Deployment
 ====================================
 
-Cette page explique comment les docs sont déployées automatiquement.
+This page explains how documentation is deployed automatically.
 
 
-Comment ça marche ?
-===================
+How It Works
+============
 
 .. image:: https://img.shields.io/badge/GitHub-Actions-blue?logo=github
    :alt: GitHub Actions
 
-Quand tu fais ``git push`` sur la branche ``main`` :
+When you ``git push`` to the ``main`` branch:
 
-1. **GitHub Actions** détecte le push
-2. Le workflow ``.github/workflows/docs.yaml`` se lance
-3. **uv** installe les dépendances
-4. **Sphinx** construit la documentation
-5. Les fichiers HTML sont déployés sur **GitHub Pages**
-6. Ta doc est visible sur https://simbouch.github.io/tutto_antony_2026_janvier/
+1. **GitHub Actions** detects the push
+2. The ``.github/workflows/docs.yaml`` workflow runs
+3. **uv** installs dependencies
+4. **Sphinx** builds the documentation
+5. HTML files are deployed to **GitHub Pages**
+6. Documentation is live at https://simbouch.github.io/tutto_antony_2026_janvier/
 
 
-Le fichier workflow
-===================
+Workflow File
+=============
 
-Voici le contenu de ``.github/workflows/docs.yaml`` :
+Contents of ``.github/workflows/docs.yaml``:
 
 .. code-block:: yaml
 
@@ -74,46 +74,46 @@ Voici le contenu de ``.github/workflows/docs.yaml`` :
            uses: actions/deploy-pages@v4
 
 
-Configuration GitHub Pages
+GitHub Pages Configuration
 ==========================
 
-Pour que ça marche, il faut activer GitHub Pages :
+To enable automatic deployment:
 
-1. Va dans **Settings** → **Pages**
-2. Choisis **Source** : ``GitHub Actions``
-3. Sauvegarde
+1. Go to **Settings** → **Pages**
+2. Set **Source**: ``GitHub Actions``
+3. Save
 
-C'est tout ! Les prochains push déploieront automatiquement.
-
-
-Vérifier le déploiement
-=======================
-
-1. Va sur GitHub → **Actions**
-2. Tu vois le workflow "Deploy Documentation"
-3. Clique dessus pour voir les logs
-4. Si c'est vert ✅ → va sur https://simbouch.github.io/tutto_antony_2026_janvier/
+That's it! Future pushes will deploy automatically.
 
 
-Résoudre les problèmes
-======================
+Verify Deployment
+=================
 
-Erreur "Pages not enabled"
+1. Go to GitHub → **Actions**
+2. Find the "Deploy Documentation" workflow
+3. Click to view logs
+4. If green ✅ → visit https://simbouch.github.io/tutto_antony_2026_janvier/
+
+
+Troubleshooting
+===============
+
+Error: "Pages not enabled"
 --------------------------
 
-- Va dans Settings → Pages → Active GitHub Actions comme source
+- Go to Settings → Pages → Set GitHub Actions as source
 
-Erreur "Sphinx build failed"
+Error: "Sphinx build failed"
 ----------------------------
 
-- Vérifie que ``source/index.rst`` existe
-- Vérifie ``source/conf.py``
-- Teste localement avec ``uv run sphinx-build source public``
+- Verify ``source/index.rst`` exists
+- Check ``source/conf.py``
+- Test locally with ``uv run sphinx-build source public``
 
-Erreur "Permission denied"
+Error: "Permission denied"
 --------------------------
 
-Ajoute ces permissions dans le workflow :
+Add these permissions to the workflow:
 
 .. code-block:: yaml
 
@@ -123,10 +123,8 @@ Ajoute ces permissions dans le workflow :
      id-token: write
 
 
-URL de ta documentation
-=======================
+Documentation URL
+=================
 
 📖 **https://simbouch.github.io/tutto_antony_2026_janvier/**
-
-Garde ce lien en favoris !
 

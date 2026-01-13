@@ -1,132 +1,132 @@
 ===================================
-💻 Référence des Commandes
+💻 Command Reference
 ===================================
 
-Toutes les commandes utiles pour ce projet.
+All useful commands for this project.
 
 
-🔧 Commandes uv
-===============
+🔧 uv Commands
+==============
 
-Installation et environnement
------------------------------
+Installation and Environment
+----------------------------
 
 .. code-block:: bash
 
-   # Installer uv
+   # Install uv
    powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
-   
-   # Créer un nouveau projet
-   uv init mon_projet
-   
-   # Synchroniser les dépendances (installe tout)
+
+   # Create a new project
+   uv init my_project
+
+   # Sync dependencies (install all)
    uv sync
-   
-   # Synchroniser avec les extras (dev, docs)
+
+   # Sync with extras (dev, docs)
    uv sync --all-extras
 
-Ajouter/Supprimer des dépendances
----------------------------------
+Add/Remove Dependencies
+-----------------------
 
 .. code-block:: bash
 
-   # Ajouter une dépendance
+   # Add a dependency
    uv add requests
-   
-   # Ajouter une dépendance de dev
+
+   # Add a dev dependency
    uv add --dev pytest
-   
-   # Supprimer une dépendance
+
+   # Remove a dependency
    uv remove requests
 
-Exécuter des commandes
-----------------------
+Execute Commands
+----------------
 
 .. code-block:: bash
 
-   # Exécuter un script Python
+   # Run a Python script
    uv run python main.py
-   
-   # Exécuter pytest
+
+   # Run pytest
    uv run pytest
-   
-   # Exécuter n'importe quelle commande
-   uv run <commande>
+
+   # Run any command
+   uv run <command>
 
 
-🧪 Commandes pytest
-===================
+🧪 pytest Commands
+==================
 
 .. code-block:: bash
 
-   # Lancer tous les tests
+   # Run all tests
    uv run pytest
-   
-   # Tests avec plus de détails
+
+   # Verbose output
    uv run pytest -v
-   
-   # Tests avec print() visible
+
+   # Show print() output
    uv run pytest -s
-   
-   # Un fichier spécifique
+
+   # Specific file
    uv run pytest test/test_valid.py
-   
-   # Un test spécifique
-   uv run pytest test/test_valid.py::test_true
-   
-   # Avec couverture de code
+
+   # Specific test
+   uv run pytest test/test_valid.py::TestBasic::test_true
+
+   # With code coverage
    uv run pytest --cov=.
 
 
-📚 Commandes Sphinx
-===================
+📚 Sphinx Commands
+==================
 
 .. code-block:: bash
 
-   # Construire la documentation HTML
+   # Build HTML documentation
    uv run sphinx-build source public
-   
-   # Reconstruire tout (ignorer le cache)
+
+   # Rebuild all (ignore cache)
    uv run sphinx-build -E source public
-   
-   # Mode verbose
+
+   # Verbose mode
    uv run sphinx-build -v source public
 
 
-🐙 Commandes Git
-================
+🐙 Git Commands
+===============
 
 .. code-block:: bash
 
-   # Voir le statut
+   # Check status
    git status
-   
-   # Ajouter tous les fichiers
+
+   # Add all files
    git add .
-   
-   # Créer un commit
-   git commit -m "Message du commit"
-   
-   # Pousser vers GitHub
+
+   # Create commit
+   git commit -m "Commit message"
+
+   # Push to GitHub
    git push
-   
-   # Récupérer les dernières modifications
+
+   # Pull latest changes
    git pull
-   
-   # Voir l'historique
+
+   # View history
    git log --oneline
 
 
-🔄 Commandes GitHub Actions
-===========================
+🔄 GitHub Actions Commands
+==========================
 
-Pour déclencher manuellement le workflow (après un échec) :
+To manually trigger the workflow (after a failure):
 
 .. code-block:: bash
 
-   # Créer un commit vide pour déclencher le workflow
+   # Create an empty commit to trigger workflow
    git commit --allow-empty -m "Trigger workflow"
    git push
 
-Ou va sur GitHub → Actions → Clique sur le workflow → "Re-run all jobs"
+Or go to GitHub → Actions → Click workflow → "Re-run all jobs"
 
